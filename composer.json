@@ -12,5 +12,8 @@
     ],
     "autoload": {
         "psr-0": {"MangoPay\\": "lib/"}
+    },
+    "require-dev": {
+        "apigen/apigen": "*"
     }
 }
