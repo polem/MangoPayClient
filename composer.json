@@ -1,0 +1,15 @@
+{
+    "name": "polem/mango-pay-client",
+    "require": {
+        "guzzle/guzzle": "*"
+    },
+    "authors": [
+        {
+            "name": "Paul-Emile MINY",
+            "email": "paulemile.miny@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"MangoPay\\": "lib/"}
+    }
+}

@@ -1,0 +1,1496 @@
+{
+    "name": "MangoPay",
+    "apiVersion": "2013-08-01",
+    "description": "MangoPay Api",
+    "operations": {
+        "CreateABeneficiary": {
+            "summary": "Create a Beneficiary",
+            "httpMethod": "POST",
+            "uri": "beneficiaries",
+            "parameters": {
+                "BankAccountOwnerName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountOwnerAddress": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountIBAN": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountBIC": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "BeneficiaryObject"
+        },
+        "FetchABeneficiary": {
+            "summary": "Fetch a Beneficiary",
+            "httpMethod": "GET",
+            "uri": "beneficiaries/{beneficiary_id}",
+            "parameters": {
+                "beneficiary_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "BeneficiaryObject"
+        },
+        "CreateAContribution": {
+            "summary": "Create a Contribution",
+            "httpMethod": "POST",
+            "uri": "contributions",
+            "parameters": {
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "PaymentCardID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Culture": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PaymentMethodType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Type": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "ContributionObject"
+        },
+        "FetchAContribution": {
+            "summary": "Fetch a Contribution",
+            "httpMethod": "GET",
+            "uri": "contributions/{contribution_id}",
+            "parameters": {
+                "contribution_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "ContributionObject"
+        },
+        "CreateAPaymentCard": {
+            "summary": "Create a Payment Card",
+            "httpMethod": "POST",
+            "uri": "cards",
+            "parameters": {
+                "OwnerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "PaymentCardObject"
+        },
+        "FetchAPaymentCard": {
+            "summary": "Fetch a Payment Card",
+            "httpMethod": "GET",
+            "uri": "cards/{paymentcard_id}",
+            "parameters": {
+                "paymentcard_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "PaymentCardObject"
+        },
+        "FetchAListOfUser’sPaymentCards": {
+            "summary": "Fetch a list of User’s Payment Cards",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/cards",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "PaymentCardObject"
+        },
+        "DeleteAPaymentCard": {
+            "summary": "Delete a Payment Card",
+            "httpMethod": "DELETE",
+            "uri": "cards/{paymentcard_id}",
+            "parameters": {
+                "paymentcard_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "PaymentCardObject"
+        },
+        "CreateAUser": {
+            "summary": "Create a User",
+            "httpMethod": "POST",
+            "uri": "users",
+            "parameters": {
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "IP": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                }
+            },
+            "responseClass": "UserObject"
+        },
+        "FetchAUser": {
+            "summary": "Fetch a User",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "UserObject"
+        },
+        "UpdateUserInfo": {
+            "summary": "Update User Info",
+            "httpMethod": "PUT",
+            "uri": "users/{user_id}",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "UserObject"
+        },
+        "CreateAWallet": {
+            "summary": "Create a Wallet",
+            "httpMethod": "POST",
+            "uri": "wallets",
+            "parameters": {
+                "Owners": {
+                    "type": "array",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Name": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Description": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RaisingGoalAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ContributionLimitDate": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "WalletObject"
+        },
+        "FetchAWallet": {
+            "summary": "Fetch a Wallet",
+            "httpMethod": "GET",
+            "uri": "wallets/{wallet_id}",
+            "parameters": {
+                "wallet_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "WalletObject"
+        },
+        "ModifyAWallet": {
+            "summary": "Modify a Wallet",
+            "httpMethod": "PUT",
+            "uri": "wallets/{wallet_id}",
+            "parameters": {
+                "wallet_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Name": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Description": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RaisingGoalAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ExpirationDate": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "WalletObject"
+        },
+        "ListUsersOfAWallet": {
+            "summary": "List Users of a Wallet",
+            "httpMethod": "GET",
+            "uri": "wallets/{wallet_id}/users",
+            "parameters": {
+                "wallet_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "WalletObject"
+        },
+        "ListWalletsFromAUser": {
+            "summary": "List Wallets from a User",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/wallets",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "WalletObject"
+        },
+        "CreateAnImmediateContribution": {
+            "summary": "Create an Immediate Contribution",
+            "httpMethod": "POST",
+            "uri": "immediate-contributions",
+            "parameters": {
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "PaymentCardID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "ContributionObject"
+        },
+        "FetchAnImmediateContribution": {
+            "summary": "Fetch an Immediate Contribution",
+            "httpMethod": "GET",
+            "uri": "immediate-contributions/{immediate_contribution_id}",
+            "parameters": {
+                "immediate_contribution_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "ContributionObject"
+        },
+        "CreateAContributionByWithdrawal": {
+            "summary": "Create a Contribution by Withdrawal",
+            "httpMethod": "POST",
+            "uri": "contributions-by-withdrawal",
+            "parameters": {
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "AmountDeclared": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "ContributionByWithdrawalObject"
+        },
+        "FetchAContributionByWithdrawal": {
+            "summary": "Fetch a ContributionByWithdrawal",
+            "httpMethod": "GET",
+            "uri": "contributions-by-withdrawal/{contributionbywithdrawal_id}",
+            "parameters": {
+                "contributionbywithdrawal_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "ContributionByWithdrawalObject"
+        },
+        "CreateAWithdrawal": {
+            "summary": "Create a withdrawal",
+            "httpMethod": "POST",
+            "uri": "withdrawals",
+            "parameters": {
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "WithdrawalObject"
+        },
+        "FetchAWithdrawal": {
+            "summary": "Fetch a Withdrawal",
+            "httpMethod": "GET",
+            "uri": "withdrawals/{withdrawal_id}",
+            "parameters": {
+                "withdrawal_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "WithdrawalObject"
+        },
+        "CreateARecurrentContribution": {
+            "summary": "Create a Recurrent Contribution",
+            "httpMethod": "POST",
+            "uri": "recurrent-contributions",
+            "parameters": {
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "StartDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "FrequencyCode": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "NumberOfExecutions": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "RecurrentContributionObject"
+        },
+        "FetchARecurrentContribution": {
+            "summary": "Fetch a Recurrent Contribution",
+            "httpMethod": "GET",
+            "uri": "recurrent-contributions/{recurrentcontribution_id}",
+            "parameters": {
+                "recurrentcontribution_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "RecurrentContributionObject"
+        },
+        "UpdateARecurrentContribution": {
+            "summary": "Update a Recurrent Contribution",
+            "httpMethod": "PUT",
+            "uri": "recurrent-contributions/{recurrentcontribution_id}",
+            "parameters": {
+                "recurrentcontribution_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "IsEnabled": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "RecurrentContributionObject"
+        },
+        "FetchTheListOfPaymentExecutions": {
+            "summary": "Fetch the list of payment executions",
+            "httpMethod": "GET",
+            "uri": "recurrent-contributions/{recurrentcontribution_id}/executions",
+            "parameters": {
+                "recurrentcontribution_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "RecurrentContributionObject"
+        },
+        "CreateATransfer": {
+            "summary": "Create a Transfer",
+            "httpMethod": "POST",
+            "uri": "transfers",
+            "parameters": {
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PayerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "PayerWalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryWalletID": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            },
+            "responseClass": "TransferObject"
+        },
+        "FetchATransfer": {
+            "summary": "Fetch a Transfer",
+            "httpMethod": "GET",
+            "uri": "transfers/{transfer_id}",
+            "parameters": {
+                "transfer_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "TransferObject"
+        },
+        "CreateATransferRefund": {
+            "summary": "Create a Transfer Refund",
+            "httpMethod": "POST",
+            "uri": "transfer-refunds",
+            "parameters": {
+                "TransferID": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "TransferObject"
+        },
+        "FetchATransferRefund": {
+            "summary": "Fetch a Transfer Refund",
+            "httpMethod": "GET",
+            "uri": "transfer-refunds/{transferrefund_id}",
+            "parameters": {
+                "transferrefund_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "TransferObject"
+        },
+        "CreateARefund": {
+            "summary": "Create a Refund",
+            "httpMethod": "POST",
+            "uri": "refunds",
+            "parameters": {
+                "ContributionID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "RefundObject"
+        },
+        "FetchARefund": {
+            "summary": "Fetch a Refund",
+            "httpMethod": "GET",
+            "uri": "refunds/{refund_id}",
+            "parameters": {
+                "refund_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "RefundObject"
+        },
+        "FetchWalletOperations": {
+            "summary": "Fetch Wallet Operations",
+            "httpMethod": "GET",
+            "uri": "wallets/{wallet_id}/operations",
+            "parameters": {
+                "wallet_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "OperationsObject"
+        },
+        "FetchUserOperations": {
+            "summary": "Fetch User Operations",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/operations",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "OperationsObject"
+        },
+        "FetchPersonalAccountOperations": {
+            "summary": "Fetch Personal Account Operations",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/operations/personal",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "OperationsObject"
+        },
+        "FetchAnOperation": {
+            "summary": "Fetch an Operation",
+            "httpMethod": "GET",
+            "uri": "operations/{operation_id}",
+            "parameters": {
+                "operation_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "OperationsObject"
+        },
+        "CreateUserStrongAuthRequest": {
+            "summary": "Create User Strong Auth Request",
+            "httpMethod": "POST",
+            "uri": "users/{user_id}/strongAuthentication",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "FetchAUserStrongAuthentication": {
+            "summary": "Fetch a User Strong Authentication",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/strongAuthentication",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "UpdateAUserStrongAuthentication": {
+            "summary": "Update a User Strong Authentication",
+            "httpMethod": "PUT",
+            "uri": "users/{user_id}/strongAuthentication",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "IsDocumentsTransmitted": {
+                    "type": "boolean",
+                    "location": "json"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "CreateABeneficiaryStrongAuthRequest": {
+            "summary": "Create a Beneficiary Strong Auth Request",
+            "httpMethod": "POST",
+            "uri": "beneficiaries/{beneficiary_id}/strongAuthentication",
+            "parameters": {
+                "beneficiary_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "FetchABeneficiaryStrongAuthentication": {
+            "summary": "Fetch a Beneficiary Strong Authentication",
+            "httpMethod": "GET",
+            "uri": "beneficiaries/{beneficiary_id}/strongAuthentication",
+            "parameters": {
+                "beneficiary_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "UpdateABeneficiaryStrongAuthentication": {
+            "summary": "Update a Beneficiary Strong Authentication",
+            "httpMethod": "PUT",
+            "uri": "beneficiaries/{beneficiary_id}/strongAuthentication",
+            "parameters": {
+                "beneficiary_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "IsDocumentsTransmitted": {
+                    "type": "boolean",
+                    "location": "json"
+                }
+            },
+            "responseClass": "StrongAuthenticationObject"
+        },
+        "GetAllPendingStrongAuthentications": {
+            "summary": "Get all pending Strong Authentications",
+            "httpMethod": "GET",
+            "uri": "strongAuthentication",
+            "parameters": {},
+            "responseClass": "StrongAuthenticationObject"
+        }
+    },
+    "models": {
+        "BeneficiaryObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BankAccountOwnerName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountOwnerAddress": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountIBAN": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountBIC": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        },
+        "ContributionObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "LeetchiFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "IsSucceeded": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsCompleted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Error": {
+                    "location": "json"
+                },
+                "PaymentCardID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Type": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "AnswerCode": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "AnswerMessage": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Culture": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        },
+        "PaymentCardObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "OwnerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "CardNumber": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RedirectURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        },
+        "UserObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "HasRegisteredMeansOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IP": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonalWalletAmount": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            }
+        },
+        "WalletObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Owners": {
+                    "type": "array",
+                    "location": "json"
+                },
+                "Name": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Description": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RaisingGoalAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "CollectedAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "SpentAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ContributionLimitDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "IsClosed": {
+                    "type": "boolean",
+                    "location": "json"
+                }
+            }
+        },
+        "ContributionByWithdrawalObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "AmountDeclared": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Status": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "GeneratedReference": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Commentary": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountOwner": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountIBAN": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "BankAccountBIC": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        },
+        "WithdrawalObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "AmountWithoutFees": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "LeetchiFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "IsCompleted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsSucceeded": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "BeneficiaryID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Error": {
+                    "location": "json"
+                }
+            }
+        },
+        "RecurrentContributionObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "LeetchiFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "IsSucceeded": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsCompleted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsEnabled": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "PaymentURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Error": {
+                    "location": "json"
+                },
+                "Culture": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "StartDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "FrequencyCode": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "NumberOfExecutions": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            }
+        },
+        "TransferObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "PayerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ClientFeeAmount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "PayerWalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryWalletID": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            }
+        },
+        "RefundObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ContributionID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "IsSucceeded": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsCompleted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Error": {
+                    "location": "json"
+                }
+            }
+        },
+        "OperationsObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "WalletID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Amount": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "TransactionType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TransactionID": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            }
+        },
+        "StrongAuthenticationObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "BeneficiaryID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UrlRequest": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "IsDocumentsTransmitted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsCompleted": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IsSucceeded": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Message": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        }
+    }
+}
