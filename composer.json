@@ -3,6 +3,7 @@
     "require": {
         "guzzle/guzzle": "*"
     },
+    "license": "MIT",
     "authors": [
         {
             "name": "Paul-Emile MINY",
