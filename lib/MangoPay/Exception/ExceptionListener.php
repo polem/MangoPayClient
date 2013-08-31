@@ -26,7 +26,10 @@ class ExceptionListener implements EventSubscriberInterface
      */
     public function onRequestError(Event $event)
     {
-        $e = new Exception($event['response']);
+        $error = json_decode((string) $event['response']->getBody(), true);
+        $message = sprintf("Technical Message: %s\nUser Message: %s", $error['TechnicalMessage'], $error['UserMessage']);
+        $exceptionClassName = sprintf("MangoPay\Exception\%sException", $error['Type']);
+        $e = new $exceptionClassName($message);
         $event->stopPropagation();
         throw $e;
     }
