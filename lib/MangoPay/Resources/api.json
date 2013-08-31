@@ -1637,7 +1637,7 @@
             "type": "array",
             "location": "json",
             "items" : {
-                "type" : "object"
+                "$ref": "OperationsObject"
             }
         },
         "FetchUserOperationsOutput": {
