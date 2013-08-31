@@ -33,7 +33,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "BeneficiaryObject"
+            "responseClass": "CreateABeneficiary"
         },
         "FetchABeneficiary": {
             "summary": "Fetch a Beneficiary",
@@ -45,7 +45,163 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "BeneficiaryObject"
+            "responseClass": "FetchABeneficiary"
+        },
+        "CreateAUser": {
+            "summary": "Create a User",
+            "httpMethod": "POST",
+            "uri": "users",
+            "parameters": {
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "IP": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                }
+            },
+            "responseClass": "CreateAUser"
+        },
+        "FetchAUser": {
+            "summary": "Fetch a User",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "FetchAUser"
+        },
+        "UpdateUserInfo": {
+            "summary": "Update User Info",
+            "httpMethod": "PUT",
+            "uri": "users/{user_id}",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "UpdateUserInfo"
+        },
+        "CreateAPaymentCard": {
+            "summary": "Create a Payment Card",
+            "httpMethod": "POST",
+            "uri": "cards",
+            "parameters": {
+                "OwnerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                }
+            },
+            "responseClass": "CreateAPaymentCard"
+        },
+        "FetchAPaymentCard": {
+            "summary": "Fetch a Payment Card",
+            "httpMethod": "GET",
+            "uri": "cards/{paymentcard_id}",
+            "parameters": {
+                "paymentcard_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "FetchAPaymentCard"
+        },
+        "FetchAListOfUsersPaymentCards": {
+            "summary": "Fetch a list of User’s Payment Cards",
+            "httpMethod": "GET",
+            "uri": "users/{user_id}/cards",
+            "parameters": {
+                "user_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "FetchAListOfUsersPaymentCards"
+        },
+        "DeleteAPaymentCard": {
+            "summary": "Delete a Payment Card",
+            "httpMethod": "DELETE",
+            "uri": "cards/{paymentcard_id}",
+            "parameters": {
+                "paymentcard_id": {
+                    "type": "integer",
+                    "location": "uri"
+                }
+            },
+            "responseClass": "DeleteAPaymentCard"
         },
         "CreateAContribution": {
             "summary": "Create a Contribution",
@@ -101,7 +257,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "ContributionObject"
+            "responseClass": "CreateAContribution"
         },
         "FetchAContribution": {
             "summary": "Fetch a Contribution",
@@ -113,163 +269,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "ContributionObject"
-        },
-        "CreateAPaymentCard": {
-            "summary": "Create a Payment Card",
-            "httpMethod": "POST",
-            "uri": "cards",
-            "parameters": {
-                "OwnerID": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "ReturnURL": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Tag": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "TemplateURL": {
-                    "type": "string",
-                    "location": "json"
-                }
-            },
-            "responseClass": "PaymentCardObject"
-        },
-        "FetchAPaymentCard": {
-            "summary": "Fetch a Payment Card",
-            "httpMethod": "GET",
-            "uri": "cards/{paymentcard_id}",
-            "parameters": {
-                "paymentcard_id": {
-                    "type": "integer",
-                    "location": "uri"
-                }
-            },
-            "responseClass": "PaymentCardObject"
-        },
-        "FetchAListOfUser’sPaymentCards": {
-            "summary": "Fetch a list of User’s Payment Cards",
-            "httpMethod": "GET",
-            "uri": "users/{user_id}/cards",
-            "parameters": {
-                "user_id": {
-                    "type": "integer",
-                    "location": "uri"
-                }
-            },
-            "responseClass": "PaymentCardObject"
-        },
-        "DeleteAPaymentCard": {
-            "summary": "Delete a Payment Card",
-            "httpMethod": "DELETE",
-            "uri": "cards/{paymentcard_id}",
-            "parameters": {
-                "paymentcard_id": {
-                    "type": "integer",
-                    "location": "uri"
-                }
-            },
-            "responseClass": "PaymentCardObject"
-        },
-        "CreateAUser": {
-            "summary": "Create a User",
-            "httpMethod": "POST",
-            "uri": "users",
-            "parameters": {
-                "Email": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "FirstName": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Lastname": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "IP": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Birthday": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Nationality": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "PersonType": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Tag": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "CanRegisterMeanOfPayment": {
-                    "type": "boolean",
-                    "location": "json"
-                }
-            },
-            "responseClass": "UserObject"
-        },
-        "FetchAUser": {
-            "summary": "Fetch a User",
-            "httpMethod": "GET",
-            "uri": "users/{user_id}",
-            "parameters": {
-                "user_id": {
-                    "type": "integer",
-                    "location": "uri"
-                }
-            },
-            "responseClass": "UserObject"
-        },
-        "UpdateUserInfo": {
-            "summary": "Update User Info",
-            "httpMethod": "PUT",
-            "uri": "users/{user_id}",
-            "parameters": {
-                "user_id": {
-                    "type": "integer",
-                    "location": "uri"
-                },
-                "Tag": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Email": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "FirstName": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Lastname": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "CanRegisterMeanOfPayment": {
-                    "type": "boolean",
-                    "location": "json"
-                },
-                "Birthday": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Nationality": {
-                    "type": "string",
-                    "location": "json"
-                }
-            },
-            "responseClass": "UserObject"
+            "responseClass": "FetchAContribution"
         },
         "CreateAWallet": {
             "summary": "Create a Wallet",
@@ -301,7 +301,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "WalletObject"
+            "responseClass": "CreateAWallet"
         },
         "FetchAWallet": {
             "summary": "Fetch a Wallet",
@@ -313,7 +313,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "WalletObject"
+            "responseClass": "FetchAWallet"
         },
         "ModifyAWallet": {
             "summary": "Modify a Wallet",
@@ -345,7 +345,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "WalletObject"
+            "responseClass": "ModifyAWallet"
         },
         "ListUsersOfAWallet": {
             "summary": "List Users of a Wallet",
@@ -357,7 +357,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "WalletObject"
+            "responseClass": "ListUsersOfAWallet"
         },
         "ListWalletsFromAUser": {
             "summary": "List Wallets from a User",
@@ -369,7 +369,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "WalletObject"
+            "responseClass": "ListWalletsFromAUser"
         },
         "CreateAnImmediateContribution": {
             "summary": "Create an Immediate Contribution",
@@ -401,7 +401,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "ContributionObject"
+            "responseClass": "CreateAnImmediateContribution"
         },
         "FetchAnImmediateContribution": {
             "summary": "Fetch an Immediate Contribution",
@@ -413,7 +413,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "ContributionObject"
+            "responseClass": "FetchAnImmediateContribution"
         },
         "CreateAContributionByWithdrawal": {
             "summary": "Create a Contribution by Withdrawal",
@@ -437,7 +437,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "ContributionByWithdrawalObject"
+            "responseClass": "CreateAContributionByWithdrawal"
         },
         "FetchAContributionByWithdrawal": {
             "summary": "Fetch a ContributionByWithdrawal",
@@ -449,7 +449,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "ContributionByWithdrawalObject"
+            "responseClass": "FetchAContributionByWithdrawal"
         },
         "CreateAWithdrawal": {
             "summary": "Create a withdrawal",
@@ -481,7 +481,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "WithdrawalObject"
+            "responseClass": "CreateAWithdrawal"
         },
         "FetchAWithdrawal": {
             "summary": "Fetch a Withdrawal",
@@ -493,7 +493,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "WithdrawalObject"
+            "responseClass": "FetchAWithdrawal"
         },
         "CreateARecurrentContribution": {
             "summary": "Create a Recurrent Contribution",
@@ -541,7 +541,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "RecurrentContributionObject"
+            "responseClass": "CreateARecurrentContribution"
         },
         "FetchARecurrentContribution": {
             "summary": "Fetch a Recurrent Contribution",
@@ -553,7 +553,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "RecurrentContributionObject"
+            "responseClass": "FetchARecurrentContribution"
         },
         "UpdateARecurrentContribution": {
             "summary": "Update a Recurrent Contribution",
@@ -573,7 +573,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "RecurrentContributionObject"
+            "responseClass": "UpdateARecurrentContribution"
         },
         "FetchTheListOfPaymentExecutions": {
             "summary": "Fetch the list of payment executions",
@@ -585,7 +585,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "RecurrentContributionObject"
+            "responseClass": "FetchTheListOfPaymentExecutions"
         },
         "CreateATransfer": {
             "summary": "Create a Transfer",
@@ -621,7 +621,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "TransferObject"
+            "responseClass": "CreateATransfer"
         },
         "FetchATransfer": {
             "summary": "Fetch a Transfer",
@@ -633,7 +633,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "TransferObject"
+            "responseClass": "FetchATransfer"
         },
         "CreateATransferRefund": {
             "summary": "Create a Transfer Refund",
@@ -649,7 +649,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "TransferObject"
+            "responseClass": "CreateATransferRefund"
         },
         "FetchATransferRefund": {
             "summary": "Fetch a Transfer Refund",
@@ -661,7 +661,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "TransferObject"
+            "responseClass": "FetchATransferRefund"
         },
         "CreateARefund": {
             "summary": "Create a Refund",
@@ -681,7 +681,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "RefundObject"
+            "responseClass": "CreateARefund"
         },
         "FetchARefund": {
             "summary": "Fetch a Refund",
@@ -693,7 +693,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "RefundObject"
+            "responseClass": "FetchARefund"
         },
         "FetchWalletOperations": {
             "summary": "Fetch Wallet Operations",
@@ -705,7 +705,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "OperationsObject"
+            "responseClass": "FetchWalletOperations"
         },
         "FetchUserOperations": {
             "summary": "Fetch User Operations",
@@ -717,7 +717,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "OperationsObject"
+            "responseClass": "FetchUserOperations"
         },
         "FetchPersonalAccountOperations": {
             "summary": "Fetch Personal Account Operations",
@@ -729,7 +729,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "OperationsObject"
+            "responseClass": "FetchPersonalAccountOperations"
         },
         "FetchAnOperation": {
             "summary": "Fetch an Operation",
@@ -741,7 +741,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "OperationsObject"
+            "responseClass": "FetchAnOperation"
         },
         "CreateUserStrongAuthRequest": {
             "summary": "Create User Strong Auth Request",
@@ -757,7 +757,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "CreateUserStrongAuthRequest"
         },
         "FetchAUserStrongAuthentication": {
             "summary": "Fetch a User Strong Authentication",
@@ -769,7 +769,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "FetchAUserStrongAuthentication"
         },
         "UpdateAUserStrongAuthentication": {
             "summary": "Update a User Strong Authentication",
@@ -789,7 +789,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "UpdateAUserStrongAuthentication"
         },
         "CreateABeneficiaryStrongAuthRequest": {
             "summary": "Create a Beneficiary Strong Auth Request",
@@ -805,7 +805,7 @@
                     "location": "json"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "CreateABeneficiaryStrongAuthRequest"
         },
         "FetchABeneficiaryStrongAuthentication": {
             "summary": "Fetch a Beneficiary Strong Authentication",
@@ -817,7 +817,7 @@
                     "location": "uri"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "FetchABeneficiaryStrongAuthentication"
         },
         "UpdateABeneficiaryStrongAuthentication": {
             "summary": "Update a Beneficiary Strong Authentication",
@@ -837,14 +837,14 @@
                     "location": "json"
                 }
             },
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "UpdateABeneficiaryStrongAuthentication"
         },
         "GetAllPendingStrongAuthentications": {
             "summary": "Get all pending Strong Authentications",
             "httpMethod": "GET",
             "uri": "strongAuthentication",
             "parameters": {},
-            "responseClass": "StrongAuthenticationObject"
+            "responseClass": "GetAllPendingStrongAuthentications"
         }
     },
     "models": {
@@ -888,6 +888,130 @@
                     "location": "json"
                 }
             }
+        },
+        "CreateABeneficiary": {
+            "$ref": "BeneficiaryObject"
+        },
+        "FetchABeneficiary": {
+            "$ref": "BeneficiaryObject"
+        },
+        "UserObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "CreationDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "UpdateDate": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Email": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "FirstName": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Lastname": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "HasRegisteredMeansOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "CanRegisterMeanOfPayment": {
+                    "type": "boolean",
+                    "location": "json"
+                },
+                "IP": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "Birthday": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Nationality": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonType": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "PersonalWalletAmount": {
+                    "type": "integer",
+                    "location": "json"
+                }
+            }
+        },
+        "CreateAUser": {
+            "$ref": "UserObject"
+        },
+        "FetchAUser": {
+            "$ref": "UserObject"
+        },
+        "UpdateUserInfo": {
+            "$ref": "UserObject"
+        },
+        "PaymentCardObject": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "Tag": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "OwnerID": {
+                    "type": "integer",
+                    "location": "json"
+                },
+                "CardNumber": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "RedirectURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "TemplateURL": {
+                    "type": "string",
+                    "location": "json"
+                },
+                "ReturnURL": {
+                    "type": "string",
+                    "location": "json"
+                }
+            }
+        },
+        "CreateAPaymentCard": {
+            "$ref": "PaymentCardObject"
+        },
+        "FetchAPaymentCard": {
+            "$ref": "PaymentCardObject"
+        },
+        "FetchAListOfUsersPaymentCards": {
+            "type": "array",
+            "items": {
+                "$ref": "PaymentCardObject"
+            }
+        },
+        "DeleteAPaymentCard": {
+            "$ref": "PaymentCardObject"
         },
         "ContributionObject": {
             "type": "object",
@@ -961,99 +1085,11 @@
                 }
             }
         },
-        "PaymentCardObject": {
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Tag": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "OwnerID": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "CardNumber": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "RedirectURL": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "TemplateURL": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "ReturnURL": {
-                    "type": "string",
-                    "location": "json"
-                }
-            }
+        "CreateAContribution": {
+            "$ref": "ContributionObject"
         },
-        "UserObject": {
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Tag": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "CreationDate": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "UpdateDate": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Email": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "FirstName": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Lastname": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "HasRegisteredMeansOfPayment": {
-                    "type": "boolean",
-                    "location": "json"
-                },
-                "CanRegisterMeanOfPayment": {
-                    "type": "boolean",
-                    "location": "json"
-                },
-                "IP": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "Birthday": {
-                    "type": "integer",
-                    "location": "json"
-                },
-                "Nationality": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "PersonType": {
-                    "type": "string",
-                    "location": "json"
-                },
-                "PersonalWalletAmount": {
-                    "type": "integer",
-                    "location": "json"
-                }
-            }
+        "FetchAContribution": {
+            "$ref": "ContributionObject"
         },
         "WalletObject": {
             "type": "object",
@@ -1111,6 +1147,33 @@
                     "location": "json"
                 }
             }
+        },
+        "CreateAWallet": {
+            "$ref": "WalletObject"
+        },
+        "FetchAWallet": {
+            "$ref": "WalletObject"
+        },
+        "ModifyAWallet": {
+            "$ref": "WalletObject"
+        },
+        "ListUsersOfAWallet": {
+            "type": "array",
+            "items": {
+                "$ref": "WalletObject"
+            }
+        },
+        "ListWalletsFromAUser": {
+            "type": "array",
+            "items": {
+                "$ref": "WalletObject"
+            }
+        },
+        "CreateAnImmediateContribution": {
+            "$ref": "ContributionObject"
+        },
+        "FetchAnImmediateContribution": {
+            "$ref": "ContributionObject"
         },
         "ContributionByWithdrawalObject": {
             "type": "object",
@@ -1173,6 +1236,12 @@
                 }
             }
         },
+        "CreateAContributionByWithdrawal": {
+            "$ref": "ContributionByWithdrawalObject"
+        },
+        "FetchAContributionByWithdrawal": {
+            "$ref": "ContributionByWithdrawalObject"
+        },
         "WithdrawalObject": {
             "type": "object",
             "properties": {
@@ -1232,6 +1301,12 @@
                     "location": "json"
                 }
             }
+        },
+        "CreateAWithdrawal": {
+            "$ref": "WithdrawalObject"
+        },
+        "FetchAWithdrawal": {
+            "$ref": "WithdrawalObject"
         },
         "RecurrentContributionObject": {
             "type": "object",
@@ -1317,6 +1392,21 @@
                 }
             }
         },
+        "CreateARecurrentContribution": {
+            "$ref": "RecurrentContributionObject"
+        },
+        "FetchARecurrentContribution": {
+            "$ref": "RecurrentContributionObject"
+        },
+        "UpdateARecurrentContribution": {
+            "$ref": "RecurrentContributionObject"
+        },
+        "FetchTheListOfPaymentExecutions": {
+            "type": "array",
+            "items": {
+                "$ref": "RecurrentContributionObject"
+            }
+        },
         "TransferObject": {
             "type": "object",
             "properties": {
@@ -1362,6 +1452,18 @@
                 }
             }
         },
+        "CreateATransfer": {
+            "$ref": "TransferObject"
+        },
+        "FetchATransfer": {
+            "$ref": "TransferObject"
+        },
+        "CreateATransferRefund": {
+            "$ref": "TransferObject"
+        },
+        "FetchATransferRefund": {
+            "$ref": "TransferObject"
+        },
         "RefundObject": {
             "type": "object",
             "properties": {
@@ -1401,6 +1503,12 @@
                     "location": "json"
                 }
             }
+        },
+        "CreateARefund": {
+            "$ref": "RefundObject"
+        },
+        "FetchARefund": {
+            "$ref": "RefundObject"
         },
         "OperationsObject": {
             "type": "object",
@@ -1442,6 +1550,18 @@
                     "location": "json"
                 }
             }
+        },
+        "FetchWalletOperations": {
+            "$ref": "OperationsObject"
+        },
+        "FetchUserOperations": {
+            "$ref": "OperationsObject"
+        },
+        "FetchPersonalAccountOperations": {
+            "$ref": "OperationsObject"
+        },
+        "FetchAnOperation": {
+            "$ref": "OperationsObject"
         },
         "StrongAuthenticationObject": {
             "type": "object",
@@ -1491,6 +1611,27 @@
                     "location": "json"
                 }
             }
+        },
+        "CreateUserStrongAuthRequest": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "FetchAUserStrongAuthentication": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "UpdateAUserStrongAuthentication": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "CreateABeneficiaryStrongAuthRequest": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "FetchABeneficiaryStrongAuthentication": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "UpdateABeneficiaryStrongAuthentication": {
+            "$ref": "StrongAuthenticationObject"
+        },
+        "GetAllPendingStrongAuthentications": {
+            "$ref": "StrongAuthenticationObject"
         }
     }
 }
