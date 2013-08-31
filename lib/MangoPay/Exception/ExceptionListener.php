@@ -9,7 +9,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  * Class ExceptionListener 
  * @author 
  */
-class ExceptionListener
+class ExceptionListener implements EventSubscriberInterface
 {
     /**
      * {@inheritdoc}

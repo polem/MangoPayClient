@@ -8,6 +8,7 @@ use Guzzle\Service\Resource\Model;
 use Guzzle\Common\Event;
 
 use MangoPay\Plugin\MangoPaySecurityPlugin;
+use MangoPay\Exception\ExceptionListener;
 
 /**
  * Class: Client
@@ -83,6 +84,7 @@ class Client extends GuzzleClient
 
         $securityPlugin = new MangoPaySecurityPlugin($config['private_key_path'], $config['private_key_pass_phrase']);
         $client->addSubscriber($securityPlugin);
+        $client->addSubscriber(new ExceptionListener());
 
         return $client;
     }
