@@ -182,7 +182,11 @@
             "parameters": {
                 "Owners": {
                     "type": "array",
-                    "location": "json"
+                    "location": "json",
+                    "items": {
+                        "type": "integer",
+                        "location": "json"
+                    }
                 },
                 "Tag": {
                     "type": "string",
@@ -1042,7 +1046,11 @@
                 },
                 "Owners": {
                     "type": "array",
-                    "location": "json"
+                    "location": "json",
+                    "items": {
+                        "type": "integer",
+                        "location": "json"
+                    }
                 },
                 "Name": {
                     "type": "string",
