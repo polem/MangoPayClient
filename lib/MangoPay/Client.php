@@ -6,6 +6,7 @@ use Guzzle\Service\Client as GuzzleClient;
 use Guzzle\Service\Description\ServiceDescription;
 use Guzzle\Service\Resource\Model;
 use Guzzle\Common\Event;
+use Guzzle\Common\Collection;
 
 use MangoPay\Plugin\MangoPaySecurityPlugin;
 use MangoPay\Exception\ExceptionListener;
@@ -70,9 +71,9 @@ class Client extends GuzzleClient
      */
     public static function factory($config = array()) {
 
-        $baseUrl = sprintf('%s/%s/partner/%s/', $config['url'], $config['version'], $config['partner_id']);
-
-        $options = array(
+        // Provide a hash of default client configuration options
+        $default = array(
+            'version' => 'v1',
             'redirect.disable' => true,
             'curl.options'     => array(
                 'CURLOPT_SSL_VERIFYHOST' => false,
@@ -80,20 +81,29 @@ class Client extends GuzzleClient
             )
         );
 
-        $client = new Client($baseUrl, $options);
+        // The following values are required when creating the client
+        $required = array(
+            'url',
+            'version',
+            'partner_id',
+            'private_key_path',
+            'private_key_path'
+        );
 
-        $securityPlugin = new MangoPaySecurityPlugin($config['private_key_path'], $config['private_key_pass_phrase']);
+         // Merge in default settings and validate the config
+        $config = Collection::fromConfig($config, $default, $required);
+
+        $baseUrl = sprintf('%s/%s/partner/%s/', $config['url'], $config['version'], $config['partner_id']);
+
+        $client = new Client($baseUrl, $config);
+        $description = ServiceDescription::factory(__DIR__ . '/Resources/api.json');
+        $client->setDescription($description);
+
+        $securityPlugin = new MangoPaySecurityPlugin($config['private_key_path'], $config['private_key_path']);
         $client->addSubscriber($securityPlugin);
         $client->addSubscriber(new ExceptionListener());
 
         return $client;
-    }
-
-    public function __construct($baseUrl, $config = null) {
-        $description = ServiceDescription::factory(__DIR__ . '/Resources/api.json');
-        $this->setDescription($description);
-
-        parent::__construct($baseUrl, $config);
     }
 }
 
