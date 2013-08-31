@@ -43,7 +43,7 @@ class TransferRefund
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -59,7 +59,7 @@ class TransferRefund
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -75,7 +75,7 @@ class TransferRefund
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -91,7 +91,7 @@ class TransferRefund
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -107,7 +107,7 @@ class TransferRefund
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -123,7 +123,7 @@ class TransferRefund
     /**
      * @param integer $transferId
      */
-    protected setTransferId() {
+    protected setTransferId($transferId) {
         $this->transferId = $transferId;
 
         return $this;

@@ -91,7 +91,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -107,7 +107,7 @@ class ContributionByWithdrawal
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -123,7 +123,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -139,7 +139,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -155,7 +155,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -171,7 +171,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $walletId
      */
-    protected setWalletId() {
+    protected setWalletId($walletId) {
         $this->walletId = $walletId;
 
         return $this;
@@ -187,7 +187,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $amountDeclared
      */
-    protected setAmountDeclared() {
+    protected setAmountDeclared($amountDeclared) {
         $this->amountDeclared = $amountDeclared;
 
         return $this;
@@ -203,7 +203,7 @@ class ContributionByWithdrawal
     /**
      * @param string $status
      */
-    protected setStatus() {
+    protected setStatus($status) {
         $this->status = $status;
 
         return $this;
@@ -219,7 +219,7 @@ class ContributionByWithdrawal
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -235,7 +235,7 @@ class ContributionByWithdrawal
     /**
      * @param string $generatedReference
      */
-    protected setGeneratedReference() {
+    protected setGeneratedReference($generatedReference) {
         $this->generatedReference = $generatedReference;
 
         return $this;
@@ -251,7 +251,7 @@ class ContributionByWithdrawal
     /**
      * @param string $commentary
      */
-    protected setCommentary() {
+    protected setCommentary($commentary) {
         $this->commentary = $commentary;
 
         return $this;
@@ -267,7 +267,7 @@ class ContributionByWithdrawal
     /**
      * @param string $bankAccountOwner
      */
-    protected setBankAccountOwner() {
+    protected setBankAccountOwner($bankAccountOwner) {
         $this->bankAccountOwner = $bankAccountOwner;
 
         return $this;
@@ -283,7 +283,7 @@ class ContributionByWithdrawal
     /**
      * @param string $bankAccountIBAN
      */
-    protected setBankAccountIBAN() {
+    protected setBankAccountIBAN($bankAccountIBAN) {
         $this->bankAccountIBAN = $bankAccountIBAN;
 
         return $this;
@@ -299,7 +299,7 @@ class ContributionByWithdrawal
     /**
      * @param string $bankAccountBIC
      */
-    protected setBankAccountBIC() {
+    protected setBankAccountBIC($bankAccountBIC) {
         $this->bankAccountBIC = $bankAccountBIC;
 
         return $this;

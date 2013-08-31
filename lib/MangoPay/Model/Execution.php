@@ -49,7 +49,7 @@ class Execution
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -65,7 +65,7 @@ class Execution
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -81,7 +81,7 @@ class Execution
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -97,7 +97,7 @@ class Execution
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -113,7 +113,7 @@ class Execution
     /**
      * @param integer $date
      */
-    protected setDate() {
+    protected setDate($date) {
         $this->date = $date;
 
         return $this;
@@ -129,7 +129,7 @@ class Execution
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -145,7 +145,7 @@ class Execution
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;

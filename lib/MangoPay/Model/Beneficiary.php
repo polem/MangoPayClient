@@ -61,7 +61,7 @@ class Beneficiary
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -77,7 +77,7 @@ class Beneficiary
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -93,7 +93,7 @@ class Beneficiary
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -109,7 +109,7 @@ class Beneficiary
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -125,7 +125,7 @@ class Beneficiary
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -141,7 +141,7 @@ class Beneficiary
     /**
      * @param string $bankAccountOwnerName
      */
-    protected setBankAccountOwnerName() {
+    protected setBankAccountOwnerName($bankAccountOwnerName) {
         $this->bankAccountOwnerName = $bankAccountOwnerName;
 
         return $this;
@@ -157,7 +157,7 @@ class Beneficiary
     /**
      * @param string $bankAccountOwnerAddress
      */
-    protected setBankAccountOwnerAddress() {
+    protected setBankAccountOwnerAddress($bankAccountOwnerAddress) {
         $this->bankAccountOwnerAddress = $bankAccountOwnerAddress;
 
         return $this;
@@ -173,7 +173,7 @@ class Beneficiary
     /**
      * @param string $bankAccountIBAN
      */
-    protected setBankAccountIBAN() {
+    protected setBankAccountIBAN($bankAccountIBAN) {
         $this->bankAccountIBAN = $bankAccountIBAN;
 
         return $this;
@@ -189,7 +189,7 @@ class Beneficiary
     /**
      * @param string $bankAccountBIC
      */
-    protected setBankAccountBIC() {
+    protected setBankAccountBIC($bankAccountBIC) {
         $this->bankAccountBIC = $bankAccountBIC;
 
         return $this;

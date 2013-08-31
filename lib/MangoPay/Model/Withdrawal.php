@@ -91,7 +91,7 @@ class Withdrawal
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -107,7 +107,7 @@ class Withdrawal
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -123,7 +123,7 @@ class Withdrawal
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -139,7 +139,7 @@ class Withdrawal
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -155,7 +155,7 @@ class Withdrawal
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -171,7 +171,7 @@ class Withdrawal
     /**
      * @param integer $walletId
      */
-    protected setWalletId() {
+    protected setWalletId($walletId) {
         $this->walletId = $walletId;
 
         return $this;
@@ -187,7 +187,7 @@ class Withdrawal
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -203,7 +203,7 @@ class Withdrawal
     /**
      * @param integer $amountWithoutFees
      */
-    protected setAmountWithoutFees() {
+    protected setAmountWithoutFees($amountWithoutFees) {
         $this->amountWithoutFees = $amountWithoutFees;
 
         return $this;
@@ -219,7 +219,7 @@ class Withdrawal
     /**
      * @param integer $clientFeeAmount
      */
-    protected setClientFeeAmount() {
+    protected setClientFeeAmount($clientFeeAmount) {
         $this->clientFeeAmount = $clientFeeAmount;
 
         return $this;
@@ -235,7 +235,7 @@ class Withdrawal
     /**
      * @param integer $leetchiFeeAmount
      */
-    protected setLeetchiFeeAmount() {
+    protected setLeetchiFeeAmount($leetchiFeeAmount) {
         $this->leetchiFeeAmount = $leetchiFeeAmount;
 
         return $this;
@@ -251,7 +251,7 @@ class Withdrawal
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;
@@ -267,7 +267,7 @@ class Withdrawal
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -283,7 +283,7 @@ class Withdrawal
     /**
      * @param integer $beneficiaryId
      */
-    protected setBeneficiaryId() {
+    protected setBeneficiaryId($beneficiaryId) {
         $this->beneficiaryId = $beneficiaryId;
 
         return $this;
@@ -299,7 +299,7 @@ class Withdrawal
     /**
      * @param  $error
      */
-    protected setError() {
+    protected setError($error) {
         $this->error = $error;
 
         return $this;

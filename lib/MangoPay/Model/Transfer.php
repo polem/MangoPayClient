@@ -67,7 +67,7 @@ class Transfer
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -83,7 +83,7 @@ class Transfer
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -99,7 +99,7 @@ class Transfer
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -115,7 +115,7 @@ class Transfer
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -131,7 +131,7 @@ class Transfer
     /**
      * @param integer $payerId
      */
-    protected setPayerId() {
+    protected setPayerId($payerId) {
         $this->payerId = $payerId;
 
         return $this;
@@ -147,7 +147,7 @@ class Transfer
     /**
      * @param integer $beneficiaryId
      */
-    protected setBeneficiaryId() {
+    protected setBeneficiaryId($beneficiaryId) {
         $this->beneficiaryId = $beneficiaryId;
 
         return $this;
@@ -163,7 +163,7 @@ class Transfer
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -179,7 +179,7 @@ class Transfer
     /**
      * @param integer $clientFeeAmount
      */
-    protected setClientFeeAmount() {
+    protected setClientFeeAmount($clientFeeAmount) {
         $this->clientFeeAmount = $clientFeeAmount;
 
         return $this;
@@ -195,7 +195,7 @@ class Transfer
     /**
      * @param integer $payerWalletId
      */
-    protected setPayerWalletId() {
+    protected setPayerWalletId($payerWalletId) {
         $this->payerWalletId = $payerWalletId;
 
         return $this;
@@ -211,7 +211,7 @@ class Transfer
     /**
      * @param integer $beneficiaryWalletId
      */
-    protected setBeneficiaryWalletId() {
+    protected setBeneficiaryWalletId($beneficiaryWalletId) {
         $this->beneficiaryWalletId = $beneficiaryWalletId;
 
         return $this;

@@ -85,7 +85,7 @@ class Wallet
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -101,7 +101,7 @@ class Wallet
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -117,7 +117,7 @@ class Wallet
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -133,7 +133,7 @@ class Wallet
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -149,7 +149,7 @@ class Wallet
     /**
      * @param array $owners
      */
-    protected setOwners() {
+    protected setOwners($owners) {
         $this->owners = $owners;
 
         return $this;
@@ -165,7 +165,7 @@ class Wallet
     /**
      * @param string $name
      */
-    protected setName() {
+    protected setName($name) {
         $this->name = $name;
 
         return $this;
@@ -181,7 +181,7 @@ class Wallet
     /**
      * @param string $description
      */
-    protected setDescription() {
+    protected setDescription($description) {
         $this->description = $description;
 
         return $this;
@@ -197,7 +197,7 @@ class Wallet
     /**
      * @param integer $raisingGoalAmount
      */
-    protected setRaisingGoalAmount() {
+    protected setRaisingGoalAmount($raisingGoalAmount) {
         $this->raisingGoalAmount = $raisingGoalAmount;
 
         return $this;
@@ -213,7 +213,7 @@ class Wallet
     /**
      * @param integer $collectedAmount
      */
-    protected setCollectedAmount() {
+    protected setCollectedAmount($collectedAmount) {
         $this->collectedAmount = $collectedAmount;
 
         return $this;
@@ -229,7 +229,7 @@ class Wallet
     /**
      * @param integer $spentAmount
      */
-    protected setSpentAmount() {
+    protected setSpentAmount($spentAmount) {
         $this->spentAmount = $spentAmount;
 
         return $this;
@@ -245,7 +245,7 @@ class Wallet
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -261,7 +261,7 @@ class Wallet
     /**
      * @param integer $contributionLimitDate
      */
-    protected setContributionLimitDate() {
+    protected setContributionLimitDate($contributionLimitDate) {
         $this->contributionLimitDate = $contributionLimitDate;
 
         return $this;
@@ -277,7 +277,7 @@ class Wallet
     /**
      * @param boolean $isClosed
      */
-    protected setIsClosed() {
+    protected setIsClosed($isClosed) {
         $this->isClosed = $isClosed;
 
         return $this;

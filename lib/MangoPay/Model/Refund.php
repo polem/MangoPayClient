@@ -61,7 +61,7 @@ class Refund
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -77,7 +77,7 @@ class Refund
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -93,7 +93,7 @@ class Refund
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -109,7 +109,7 @@ class Refund
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -125,7 +125,7 @@ class Refund
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -141,7 +141,7 @@ class Refund
     /**
      * @param integer $contributionId
      */
-    protected setContributionId() {
+    protected setContributionId($contributionId) {
         $this->contributionId = $contributionId;
 
         return $this;
@@ -157,7 +157,7 @@ class Refund
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -173,7 +173,7 @@ class Refund
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;
@@ -189,7 +189,7 @@ class Refund
     /**
      * @param  $error
      */
-    protected setError() {
+    protected setError($error) {
         $this->error = $error;
 
         return $this;

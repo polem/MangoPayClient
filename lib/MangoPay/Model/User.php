@@ -91,7 +91,7 @@ class User
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -107,7 +107,7 @@ class User
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -123,7 +123,7 @@ class User
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -139,7 +139,7 @@ class User
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -155,7 +155,7 @@ class User
     /**
      * @param string $email
      */
-    protected setEmail() {
+    protected setEmail($email) {
         $this->email = $email;
 
         return $this;
@@ -171,7 +171,7 @@ class User
     /**
      * @param string $firstName
      */
-    protected setFirstName() {
+    protected setFirstName($firstName) {
         $this->firstName = $firstName;
 
         return $this;
@@ -187,7 +187,7 @@ class User
     /**
      * @param string $lastname
      */
-    protected setLastname() {
+    protected setLastname($lastname) {
         $this->lastname = $lastname;
 
         return $this;
@@ -203,7 +203,7 @@ class User
     /**
      * @param boolean $hasRegisteredMeansOfPayment
      */
-    protected setHasRegisteredMeansOfPayment() {
+    protected setHasRegisteredMeansOfPayment($hasRegisteredMeansOfPayment) {
         $this->hasRegisteredMeansOfPayment = $hasRegisteredMeansOfPayment;
 
         return $this;
@@ -219,7 +219,7 @@ class User
     /**
      * @param boolean $canRegisterMeanOfPayment
      */
-    protected setCanRegisterMeanOfPayment() {
+    protected setCanRegisterMeanOfPayment($canRegisterMeanOfPayment) {
         $this->canRegisterMeanOfPayment = $canRegisterMeanOfPayment;
 
         return $this;
@@ -235,7 +235,7 @@ class User
     /**
      * @param string $iP
      */
-    protected setIP() {
+    protected setIP($iP) {
         $this->iP = $iP;
 
         return $this;
@@ -251,7 +251,7 @@ class User
     /**
      * @param integer $birthday
      */
-    protected setBirthday() {
+    protected setBirthday($birthday) {
         $this->birthday = $birthday;
 
         return $this;
@@ -267,7 +267,7 @@ class User
     /**
      * @param string $nationality
      */
-    protected setNationality() {
+    protected setNationality($nationality) {
         $this->nationality = $nationality;
 
         return $this;
@@ -283,7 +283,7 @@ class User
     /**
      * @param string $personType
      */
-    protected setPersonType() {
+    protected setPersonType($personType) {
         $this->personType = $personType;
 
         return $this;
@@ -299,7 +299,7 @@ class User
     /**
      * @param integer $personalWalletAmount
      */
-    protected setPersonalWalletAmount() {
+    protected setPersonalWalletAmount($personalWalletAmount) {
         $this->personalWalletAmount = $personalWalletAmount;
 
         return $this;

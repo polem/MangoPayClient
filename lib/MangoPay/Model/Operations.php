@@ -61,7 +61,7 @@ class Operations
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -77,7 +77,7 @@ class Operations
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -93,7 +93,7 @@ class Operations
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -109,7 +109,7 @@ class Operations
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -125,7 +125,7 @@ class Operations
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -141,7 +141,7 @@ class Operations
     /**
      * @param integer $walletId
      */
-    protected setWalletId() {
+    protected setWalletId($walletId) {
         $this->walletId = $walletId;
 
         return $this;
@@ -157,7 +157,7 @@ class Operations
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -173,7 +173,7 @@ class Operations
     /**
      * @param string $transactionType
      */
-    protected setTransactionType() {
+    protected setTransactionType($transactionType) {
         $this->transactionType = $transactionType;
 
         return $this;
@@ -189,7 +189,7 @@ class Operations
     /**
      * @param integer $transactionId
      */
-    protected setTransactionId() {
+    protected setTransactionId($transactionId) {
         $this->transactionId = $transactionId;
 
         return $this;

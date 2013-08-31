@@ -49,7 +49,7 @@ class PaymentCard
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -65,7 +65,7 @@ class PaymentCard
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -81,7 +81,7 @@ class PaymentCard
     /**
      * @param integer $ownerId
      */
-    protected setOwnerId() {
+    protected setOwnerId($ownerId) {
         $this->ownerId = $ownerId;
 
         return $this;
@@ -97,7 +97,7 @@ class PaymentCard
     /**
      * @param string $cardNumber
      */
-    protected setCardNumber() {
+    protected setCardNumber($cardNumber) {
         $this->cardNumber = $cardNumber;
 
         return $this;
@@ -113,7 +113,7 @@ class PaymentCard
     /**
      * @param string $redirectURL
      */
-    protected setRedirectURL() {
+    protected setRedirectURL($redirectURL) {
         $this->redirectURL = $redirectURL;
 
         return $this;
@@ -129,7 +129,7 @@ class PaymentCard
     /**
      * @param string $templateURL
      */
-    protected setTemplateURL() {
+    protected setTemplateURL($templateURL) {
         $this->templateURL = $templateURL;
 
         return $this;
@@ -145,7 +145,7 @@ class PaymentCard
     /**
      * @param string $returnURL
      */
-    protected setReturnURL() {
+    protected setReturnURL($returnURL) {
         $this->returnURL = $returnURL;
 
         return $this;

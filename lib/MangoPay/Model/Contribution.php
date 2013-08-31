@@ -109,7 +109,7 @@ class Contribution
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -125,7 +125,7 @@ class Contribution
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -141,7 +141,7 @@ class Contribution
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -157,7 +157,7 @@ class Contribution
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -173,7 +173,7 @@ class Contribution
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -189,7 +189,7 @@ class Contribution
     /**
      * @param integer $walletId
      */
-    protected setWalletId() {
+    protected setWalletId($walletId) {
         $this->walletId = $walletId;
 
         return $this;
@@ -205,7 +205,7 @@ class Contribution
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -221,7 +221,7 @@ class Contribution
     /**
      * @param integer $clientFeeAmount
      */
-    protected setClientFeeAmount() {
+    protected setClientFeeAmount($clientFeeAmount) {
         $this->clientFeeAmount = $clientFeeAmount;
 
         return $this;
@@ -237,7 +237,7 @@ class Contribution
     /**
      * @param integer $leetchiFeeAmount
      */
-    protected setLeetchiFeeAmount() {
+    protected setLeetchiFeeAmount($leetchiFeeAmount) {
         $this->leetchiFeeAmount = $leetchiFeeAmount;
 
         return $this;
@@ -253,7 +253,7 @@ class Contribution
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -269,7 +269,7 @@ class Contribution
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;
@@ -285,7 +285,7 @@ class Contribution
     /**
      * @param  $error
      */
-    protected setError() {
+    protected setError($error) {
         $this->error = $error;
 
         return $this;
@@ -301,7 +301,7 @@ class Contribution
     /**
      * @param integer $paymentCardId
      */
-    protected setPaymentCardId() {
+    protected setPaymentCardId($paymentCardId) {
         $this->paymentCardId = $paymentCardId;
 
         return $this;
@@ -317,7 +317,7 @@ class Contribution
     /**
      * @param string $type
      */
-    protected setType() {
+    protected setType($type) {
         $this->type = $type;
 
         return $this;
@@ -333,7 +333,7 @@ class Contribution
     /**
      * @param string $answerCode
      */
-    protected setAnswerCode() {
+    protected setAnswerCode($answerCode) {
         $this->answerCode = $answerCode;
 
         return $this;
@@ -349,7 +349,7 @@ class Contribution
     /**
      * @param string $answerMessage
      */
-    protected setAnswerMessage() {
+    protected setAnswerMessage($answerMessage) {
         $this->answerMessage = $answerMessage;
 
         return $this;
@@ -365,7 +365,7 @@ class Contribution
     /**
      * @param string $culture
      */
-    protected setCulture() {
+    protected setCulture($culture) {
         $this->culture = $culture;
 
         return $this;

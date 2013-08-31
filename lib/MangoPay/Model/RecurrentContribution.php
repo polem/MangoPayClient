@@ -127,7 +127,7 @@ class RecurrentContribution
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -143,7 +143,7 @@ class RecurrentContribution
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -159,7 +159,7 @@ class RecurrentContribution
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -175,7 +175,7 @@ class RecurrentContribution
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -191,7 +191,7 @@ class RecurrentContribution
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -207,7 +207,7 @@ class RecurrentContribution
     /**
      * @param integer $walletId
      */
-    protected setWalletId() {
+    protected setWalletId($walletId) {
         $this->walletId = $walletId;
 
         return $this;
@@ -223,7 +223,7 @@ class RecurrentContribution
     /**
      * @param integer $amount
      */
-    protected setAmount() {
+    protected setAmount($amount) {
         $this->amount = $amount;
 
         return $this;
@@ -239,7 +239,7 @@ class RecurrentContribution
     /**
      * @param integer $clientFeeAmount
      */
-    protected setClientFeeAmount() {
+    protected setClientFeeAmount($clientFeeAmount) {
         $this->clientFeeAmount = $clientFeeAmount;
 
         return $this;
@@ -255,7 +255,7 @@ class RecurrentContribution
     /**
      * @param integer $leetchiFeeAmount
      */
-    protected setLeetchiFeeAmount() {
+    protected setLeetchiFeeAmount($leetchiFeeAmount) {
         $this->leetchiFeeAmount = $leetchiFeeAmount;
 
         return $this;
@@ -271,7 +271,7 @@ class RecurrentContribution
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -287,7 +287,7 @@ class RecurrentContribution
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;
@@ -303,7 +303,7 @@ class RecurrentContribution
     /**
      * @param boolean $isEnabled
      */
-    protected setIsEnabled() {
+    protected setIsEnabled($isEnabled) {
         $this->isEnabled = $isEnabled;
 
         return $this;
@@ -319,7 +319,7 @@ class RecurrentContribution
     /**
      * @param string $paymentURL
      */
-    protected setPaymentURL() {
+    protected setPaymentURL($paymentURL) {
         $this->paymentURL = $paymentURL;
 
         return $this;
@@ -335,7 +335,7 @@ class RecurrentContribution
     /**
      * @param string $templateURL
      */
-    protected setTemplateURL() {
+    protected setTemplateURL($templateURL) {
         $this->templateURL = $templateURL;
 
         return $this;
@@ -351,7 +351,7 @@ class RecurrentContribution
     /**
      * @param string $returnURL
      */
-    protected setReturnURL() {
+    protected setReturnURL($returnURL) {
         $this->returnURL = $returnURL;
 
         return $this;
@@ -367,7 +367,7 @@ class RecurrentContribution
     /**
      * @param  $error
      */
-    protected setError() {
+    protected setError($error) {
         $this->error = $error;
 
         return $this;
@@ -383,7 +383,7 @@ class RecurrentContribution
     /**
      * @param string $culture
      */
-    protected setCulture() {
+    protected setCulture($culture) {
         $this->culture = $culture;
 
         return $this;
@@ -399,7 +399,7 @@ class RecurrentContribution
     /**
      * @param integer $startDate
      */
-    protected setStartDate() {
+    protected setStartDate($startDate) {
         $this->startDate = $startDate;
 
         return $this;
@@ -415,7 +415,7 @@ class RecurrentContribution
     /**
      * @param string $frequencyCode
      */
-    protected setFrequencyCode() {
+    protected setFrequencyCode($frequencyCode) {
         $this->frequencyCode = $frequencyCode;
 
         return $this;
@@ -431,7 +431,7 @@ class RecurrentContribution
     /**
      * @param integer $numberOfExecutions
      */
-    protected setNumberOfExecutions() {
+    protected setNumberOfExecutions($numberOfExecutions) {
         $this->numberOfExecutions = $numberOfExecutions;
 
         return $this;

@@ -73,7 +73,7 @@ class StrongAuthentication
     /**
      * @param integer $id
      */
-    protected setId() {
+    protected setId($id) {
         $this->id = $id;
 
         return $this;
@@ -89,7 +89,7 @@ class StrongAuthentication
     /**
      * @param string $tag
      */
-    protected setTag() {
+    protected setTag($tag) {
         $this->tag = $tag;
 
         return $this;
@@ -105,7 +105,7 @@ class StrongAuthentication
     /**
      * @param integer $creationDate
      */
-    protected setCreationDate() {
+    protected setCreationDate($creationDate) {
         $this->creationDate = $creationDate;
 
         return $this;
@@ -121,7 +121,7 @@ class StrongAuthentication
     /**
      * @param integer $updateDate
      */
-    protected setUpdateDate() {
+    protected setUpdateDate($updateDate) {
         $this->updateDate = $updateDate;
 
         return $this;
@@ -137,7 +137,7 @@ class StrongAuthentication
     /**
      * @param integer $userId
      */
-    protected setUserId() {
+    protected setUserId($userId) {
         $this->userId = $userId;
 
         return $this;
@@ -153,7 +153,7 @@ class StrongAuthentication
     /**
      * @param integer $beneficiaryId
      */
-    protected setBeneficiaryId() {
+    protected setBeneficiaryId($beneficiaryId) {
         $this->beneficiaryId = $beneficiaryId;
 
         return $this;
@@ -169,7 +169,7 @@ class StrongAuthentication
     /**
      * @param string $urlRequest
      */
-    protected setUrlRequest() {
+    protected setUrlRequest($urlRequest) {
         $this->urlRequest = $urlRequest;
 
         return $this;
@@ -185,7 +185,7 @@ class StrongAuthentication
     /**
      * @param boolean $isDocumentsTransmitted
      */
-    protected setIsDocumentsTransmitted() {
+    protected setIsDocumentsTransmitted($isDocumentsTransmitted) {
         $this->isDocumentsTransmitted = $isDocumentsTransmitted;
 
         return $this;
@@ -201,7 +201,7 @@ class StrongAuthentication
     /**
      * @param boolean $isCompleted
      */
-    protected setIsCompleted() {
+    protected setIsCompleted($isCompleted) {
         $this->isCompleted = $isCompleted;
 
         return $this;
@@ -217,7 +217,7 @@ class StrongAuthentication
     /**
      * @param boolean $isSucceeded
      */
-    protected setIsSucceeded() {
+    protected setIsSucceeded($isSucceeded) {
         $this->isSucceeded = $isSucceeded;
 
         return $this;
@@ -233,7 +233,7 @@ class StrongAuthentication
     /**
      * @param string $message
      */
-    protected setMessage() {
+    protected setMessage($message) {
         $this->message = $message;
 
         return $this;
