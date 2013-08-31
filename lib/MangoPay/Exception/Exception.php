@@ -5,7 +5,7 @@ namespace MangoPay\Exception;
 /**
  * Class Exception 
  */
-abstract class Exception extends \Exception
+class Exception extends \Exception
 {
 }
 

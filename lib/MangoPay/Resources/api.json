@@ -279,6 +279,12 @@
             },
             "responseClass": "ListWalletsFromAUserOutput"
         },
+        "ListUsers": {
+            "summary": "List users",
+            "httpMethod": "GET",
+            "uri": "users",
+            "responseClass": "ListUsersOutput"
+        },
         "CreateAUser": {
             "summary": "Create a User",
             "httpMethod": "POST",
@@ -1168,6 +1174,12 @@
                 }
             }
         },
+        "ListUsersOutput": {
+            "type": "array",
+            "items": {
+                "$ref": "UserObject"
+            }
+        },
         "CreateAUserOutput": {
             "$ref": "UserObject"
         },
@@ -1623,8 +1635,9 @@
         },
         "FetchWalletOperationsOutput": {
             "type": "array",
-            "items": {
-                "$ref": "OperationsObject"
+            "location": "json",
+            "items" : {
+                "type" : "object"
             }
         },
         "FetchUserOperationsOutput": {
