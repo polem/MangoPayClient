@@ -1,7 +1,7 @@
 {
     "name": "polem/mango-pay-client",
     "require": {
-        "guzzle/guzzle": "dev-hotfix/response-xml-visitor-internals"
+        "guzzle/guzzle": "dev-master"
     },
     "minimum-stability" : "dev",
     "license": "MIT",
