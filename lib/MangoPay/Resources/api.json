@@ -860,6 +860,7 @@
     "models": {
         "ContributionObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -938,6 +939,7 @@
         },
         "PaymentCardObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -976,8 +978,8 @@
             "$ref": "PaymentCardObject"
         },
         "FetchAListOfUsersPaymentCardsOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "PaymentCardObject"
             }
         },
@@ -986,6 +988,7 @@
         },
         "BeneficiaryObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1033,6 +1036,7 @@
         },
         "WalletObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1102,19 +1106,20 @@
             "$ref": "WalletObject"
         },
         "ListUsersOfAWalletOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "UserObject"
             }
         },
         "ListWalletsFromAUserOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "WalletObject"
             }
         },
         "UserObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1175,8 +1180,8 @@
             }
         },
         "ListUsersOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "UserObject"
             }
         },
@@ -1197,6 +1202,7 @@
         },
         "ContributionByWithdrawalObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1264,6 +1270,7 @@
         },
         "WithdrawalObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1330,6 +1337,7 @@
         },
         "TransferObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1375,6 +1383,7 @@
         },
         "TransferRefundObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1416,6 +1425,7 @@
         },
         "RecurrentContributionObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1500,6 +1510,7 @@
         },
         "ExecutionObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1548,6 +1559,7 @@
         },
         "RefundObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1594,6 +1606,7 @@
         },
         "OperationsObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1634,21 +1647,20 @@
             }
         },
         "FetchWalletOperationsOutput": {
-            "type": "array",
-            "location": "json",
-            "items" : {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "OperationsObject"
             }
         },
         "FetchUserOperationsOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "OperationsObject"
             }
         },
         "FetchPersonalAccountOperationsOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "OperationsObject"
             }
         },
@@ -1657,6 +1669,7 @@
         },
         "StrongAuthenticationObject": {
             "type": "object",
+            "location": "json",
             "properties": {
                 "ID": {
                     "type": "integer",
@@ -1723,8 +1736,8 @@
             "$ref": "StrongAuthenticationObject"
         },
         "GetAllPendingStrongAuthenticationsOutput": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
                 "$ref": "StrongAuthenticationObject"
             }
         }
